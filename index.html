@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio TKJ - BAGAS BIMANTORO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#00e5ff22,transparent 60%),
+radial-gradient(circle at bottom,#00ffb322,transparent 60%);
+animation:bgmove 10s linear infinite alternate;
+z-index:-2;
+}
+
+@keyframes bgmove{
+0%{transform:scale(1);}
+100%{transform:scale(1.2);}
+}
+
+header{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:60px 20px;
+text-align:center;
+}
+
+.profile-container{
+position:relative;
+width:180px;
+height:180px;
+margin-bottom:20px;
+cursor:pointer;
+}
+
+.profile-container img{
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+border:4px solid cyan;
+box-shadow:0 0 25px cyan;
+transition:.4s;
+}
+
+.profile-container:hover img{
+transform:scale(1.05);
+box-shadow:0 0 45px cyan;
+}
+
+input[type=file]{
+display:none;
+}
+
+h1{
+font-size:40px;
+color:#00e5ff;
+text-shadow:0 0 20px cyan;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px cyan;}
+to{text-shadow:0 0 35px cyan;}
+}
+
+h2{
+margin-top:10px;
+font-weight:300;
+color:#ddd;
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+.card{
+background:#101a35;
+padding:25px;
+border-radius:20px;
+margin-bottom:30px;
+box-shadow:0 0 20px #00e5ff55;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 35px cyan;
+}
+
+.title{
+color:#00e5ff;
+font-size:28px;
+margin-bottom:15px;
+}
+
+.skill{
+margin:15px 0;
+}
+
+.bar{
+height:10px;
+background:#222;
+border-radius:50px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,#00e5ff,#00ff9d);
+animation:load 2s forwards;
+}
+
+@keyframes load{
+from{width:0;}
+}
+
+.social{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.social a{
+text-decoration:none;
+color:white;
+padding:15px;
+background:#111;
+border:2px solid cyan;
+border-radius:15px;
+text-align:center;
+transition:.4s;
+}
+
+.social a:hover{
+background:cyan;
+color:black;
+box-shadow:0 0 25px cyan;
+transform:scale(1.05);
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+background:cyan;
+color:black;
+font-weight:bold;
+border-radius:40px;
+text-decoration:none;
+transition:.4s;
+}
+
+.btn:hover{
+box-shadow:0 0 25px cyan;
+transform:scale(1.05);
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#aaa;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<label class="profile-container">
+
+<img id="photo" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+
+<input type="file" id="upload" accept="image/*">
+
+</label>
+
+<h1>BAGAS BIMANTORO</h1>
+
+<h2>Teknik Komputer dan Jaringan (TKJ)</h2>
+
+<a class="btn" href="https://wa.me/6285810214086" target="_blank">
+Chat WhatsApp
+</a>
+
+</header>
+
+<section>
+
+<div class="card">
+<div class="title">Tentang Saya</div>
+
+<p>
+Halo! Saya <b>BAGAS BIMANTORO</b>, siswa jurusan
+<b>Teknik Komputer dan Jaringan (TKJ)</b>.
+Saya memiliki minat dalam dunia jaringan komputer,
+perakitan komputer, server, keamanan jaringan,
+serta teknologi modern.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="title">
+Skill TKJ
+</div>
+
+<div class="skill">
+Networking
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+Mikrotik
+<div class="bar">
+<div class="fill" style="width:85%"></div>
+</div>
+</div>
+
+<div class="skill">
+Cisco
+<div class="bar">
+<div class="fill" style="width:80%"></div>
+</div>
+</div>
+
+<div class="skill">
+Computer Repair
+<div class="bar">
+<div class="fill" style="width:95%"></div>
+</div>
+</div>
+
+<div class="skill">
+Linux Server
+<div class="bar">
+<div class="fill" style="width:75%"></div>
+</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="title">
+Kontak & Media Sosial
+</div>
+
+<div class="social">
+
+<a href="mailto:bagaslek1@gmail.com">
+📧 Email
+</a>
+
+<a href="https://wa.me/6285810214086" target="_blank">
+📱 WhatsApp
+</a>
+
+<a href="https://www.instagram.com/b4gass.bmtr?igsh=MW83am0wbGc5MWJsZQ==" target="_blank">
+📷 Instagram
+</a>
+
+<a href="https://www.tiktok.com/@bagassss1_?_r=1&_t=ZS-98EwdR6bBLx" target="_blank">
+🎵 TikTok
+</a>
+
+<a href="https://youtube.com/@bryann-s4o?si=GyRN05JqlSBhnh1v" target="_blank">
+▶ YouTube
+</a>
+
+<a href="https://www.facebook.com/share/1Cw9Pzuw4f/" target="_blank">
+📘 Facebook
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 BAGAS BIMANTORO | Portfolio TKJ
+
+</footer>
+
+<script>
+
+const upload=document.getElementById("upload");
+const photo=document.getElementById("photo");
+
+upload.onchange=function(e){
+
+const reader=new FileReader();
+
+reader.onload=function(){
+
+photo.src=reader.result;
+
+}
+
+reader.readAsDataURL(e.target.files[0]);
+
+}
+
+</script>
+
+</body>
+</html>
